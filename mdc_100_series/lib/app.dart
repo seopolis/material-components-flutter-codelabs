@@ -39,25 +39,16 @@ final ThemeData _kShrineTheme = _buildShrineTheme();
 ThemeData _buildShrineTheme() {
   final ThemeData base = ThemeData.light();
   return base.copyWith(
-    accentColor: kShrineBrown900,
-    primaryColor: kShrinePink100,
+    primaryColor: kShrinePurple,
     buttonTheme: base.buttonTheme.copyWith(
-      buttonColor: kShrinePink100,
-      colorScheme: base.colorScheme.copyWith(
-        secondary: kShrineBrown900,
-      ),
-    ),
-    buttonBarTheme: base.buttonBarTheme.copyWith(
-      buttonTextTheme: ButtonTextTheme.accent,
-    ),
-    scaffoldBackgroundColor: kShrineBackgroundWhite,
-    cardColor: kShrineBackgroundWhite,
-    textSelectionColor: kShrinePink100,
-    errorColor: kShrineErrorRed,
+        buttonColor: kShrinePurple,
+        textTheme: ButtonTextTheme.primary,
+        colorScheme: ColorScheme.light().copyWith(primary: kShrinePurple)),
+    scaffoldBackgroundColor: kShrineSurfaceWhite,
     textTheme: _buildShrineTextTheme(base.textTheme),
     primaryTextTheme: _buildShrineTextTheme(base.primaryTextTheme),
     accentTextTheme: _buildShrineTextTheme(base.accentTextTheme),
-    primaryIconTheme: base.iconTheme.copyWith(color: kShrineBrown900),
+    primaryIconTheme: base.iconTheme.copyWith(color: kShrineSurfaceWhite),
     inputDecorationTheme: InputDecorationTheme(
       border: CutCornersBorder(),
     ),
@@ -77,8 +68,6 @@ TextTheme _buildShrineTextTheme(TextTheme base) {
         ),
       )
       .apply(
-        fontFamily: 'Rubik',
-        displayColor: kShrineBrown900,
-        bodyColor: kShrineBrown900,
+        fontFamily: 'Raleway',
       );
 }
